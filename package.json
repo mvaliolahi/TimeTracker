@@ -1,0 +1,11 @@
+{
+  "name": "time-tracker",
+  "version": "1.0.0",
+  "description": "Simple time tracker for use on the web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Meysam Valiolahi",
+  "license": "ISC"
+}
