@@ -1,4 +1,4 @@
-window.TimeTracker = (function () {
+const TimeTracker = (function () {
     let intervalId = 0;
     let intervalTimeout = 1000;
     let callback = null;
@@ -146,3 +146,5 @@ window.TimeTracker = (function () {
         read: read,
     };
 })();
+
+export default TimeTracker;
