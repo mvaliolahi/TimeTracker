@@ -1,11 +1,19 @@
 {
-  "name": "time-tracker",
+  "name": "@mvaliolahi/time-tracker",
   "version": "1.0.0",
   "description": "Simple time tracker for use on the web",
-  "main": "index.js",
+  "main": "time-tracker.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Meysam Valiolahi",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvaliolahi/TimeTracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mvaliolahi/TimeTracker/issues"
+  },
+  "homepage": "https://github.com/mvaliolahi/TimeTracker#readme"
 }

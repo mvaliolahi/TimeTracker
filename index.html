@@ -6,7 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="index.js"></script>
+        <script src="time-tracker.js"></script>
     </head>
     <body>
         <p id="sessionDuration"></p>
@@ -14,10 +14,10 @@
 
         <script>
             TimeTracker.start("home", (data) => {
-                document.getElementById('sessionDuration').innerHTML = data.format
+                document.getElementById('sessionDuration').innerHTML = `Spending time for home page: ${data.format}`
+                document.getElementById('sessionDurationAbout').innerHTML =   `Spending time for about page: ${TimeTracker.read("about").format}`
             });
 
-            document.getElementById('sessionDurationAbout').innerHTML =  TimeTracker.read("about").format
         </script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-var TimeTracker = (function () {
+window.TimeTracker = (function () {
     let intervalId = 0;
     let intervalTimeout = 1000;
     let callback = null;
@@ -30,8 +30,15 @@ var TimeTracker = (function () {
     }
 
     // Public methods
+    function reset(sessionKey) {
+        clearInterval(intervalId);
+        saveSessionData(sessionKey, {});
+    }
+
     function start(sessionKey, startCallback = null, startIntervalTimeout = null, changeStateCallback = null) {
-        callback = startCallback;
+        if (startCallback) {
+            callback = startCallback;
+        }
 
         if (!sessionKey) {
             throw new Error("Session key must be provided.");
@@ -135,6 +142,7 @@ var TimeTracker = (function () {
         start: start,
         pause: pause,
         resume: resume,
+        reset: reset,
         read: read,
     };
 })();

@@ -9,7 +9,7 @@ TimeTracker is a JavaScript library designed to track time durations, specifical
 
 ### Installation
 ```bash
-npm install mvaliolahi/time-tracker
+npm install @mvaliolahi/time-tracker
 ```
 
 ### Start tracking

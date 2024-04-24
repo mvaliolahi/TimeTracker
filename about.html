@@ -6,14 +6,13 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="index.js"></script>
+        <script src="time-tracker.js"></script>
     </head>
     <body>
         <p id="sessionDuration"></p>
 
         <script>
             TimeTracker.start("about", (data) => {
-                console.log(data.format, data.milliseconds)
                 document.getElementById('sessionDuration').innerHTML = data.format
             });
         </script>
