@@ -61,6 +61,13 @@ const TimeTracker = (function () {
         return intervalId;
     }
 
+    function output(sessionDuration, ) {
+        return {
+            format: formatDuration(sessionDuration) || "",
+            milliseconds: sessionDuration || 0,
+            seconds: sessionDuration / 1000,
+        };
+    }
     function period(startTime, sessionKey) {
         if (callback) {
             return setInterval(function () {
@@ -68,10 +75,7 @@ const TimeTracker = (function () {
                 let elapsed = currentTime - startTime;
                 let sessionDuration = getSessionDuration(sessionKey) + elapsed;
 
-                callback({
-                    milliseconds: sessionDuration,
-                    format: formatDuration(sessionDuration)
-                });
+                callback(output(sessionDuration));
             }, intervalTimeout); // Update every second
         }
     }
@@ -131,10 +135,7 @@ const TimeTracker = (function () {
     function read(sessionKey) {
         let sessionDuration = getSessionDuration(sessionKey);
 
-        return {
-            milliseconds: sessionDuration || 0,
-            format: formatDuration(sessionDuration) || ""
-        }
+        return output(sessionDuration)
     }
 
     // Public API
