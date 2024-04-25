@@ -1,6 +1,6 @@
 {
   "name": "@mvaliolahi/time-tracker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple time tracker for use on the web",
   "main": "time-tracker.js",
   "scripts": {
